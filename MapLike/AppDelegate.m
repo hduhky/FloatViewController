@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MapLikeViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MapLikeViewController *mapLikeViewController = [[MapLikeViewController alloc] init];
+    
+//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//    tabBarController.viewControllers = @[mapLikeViewController];
+    
+    self.window =  [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = mapLikeViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
