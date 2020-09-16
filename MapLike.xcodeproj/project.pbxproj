@@ -18,6 +18,7 @@
 		4F3421E22511AC81005BD0C0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3421E12511AC81005BD0C0 /* TableViewController.m */; };
 		4F3421E52511B582005BD0C0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3421E42511B582005BD0C0 /* MineViewController.m */; };
 		4F3421F12511E752005BD0C0 /* UVContainerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3421F02511E752005BD0C0 /* UVContainerScrollView.m */; };
+		4F3421F425120768005BD0C0 /* UVContainerScrollDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3421F325120768005BD0C0 /* UVContainerScrollDelegate.m */; };
 		4F8ED61B2510D80D00F6DC8D /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ED6132510D80D00F6DC8D /* ContainerViewController.m */; };
 		4F8ED61C2510D80D00F6DC8D /* ContainerScrollDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ED6152510D80D00F6DC8D /* ContainerScrollDelegate.m */; };
 		4F8ED61D2510D80D00F6DC8D /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ED61A2510D80D00F6DC8D /* ContainerView.m */; };
@@ -45,6 +46,8 @@
 		4F3421E42511B582005BD0C0 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		4F3421EF2511E752005BD0C0 /* UVContainerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVContainerScrollView.h; sourceTree = "<group>"; };
 		4F3421F02511E752005BD0C0 /* UVContainerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVContainerScrollView.m; sourceTree = "<group>"; };
+		4F3421F225120768005BD0C0 /* UVContainerScrollDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVContainerScrollDelegate.h; sourceTree = "<group>"; };
+		4F3421F325120768005BD0C0 /* UVContainerScrollDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVContainerScrollDelegate.m; sourceTree = "<group>"; };
 		4F8ED6132510D80D00F6DC8D /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		4F8ED6142510D80D00F6DC8D /* ContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerView.h; sourceTree = "<group>"; };
 		4F8ED6152510D80D00F6DC8D /* ContainerScrollDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerScrollDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				4F3421E42511B582005BD0C0 /* MineViewController.m */,
 				4F3421EF2511E752005BD0C0 /* UVContainerScrollView.h */,
 				4F3421F02511E752005BD0C0 /* UVContainerScrollView.m */,
+				4F3421F225120768005BD0C0 /* UVContainerScrollDelegate.h */,
+				4F3421F325120768005BD0C0 /* UVContainerScrollDelegate.m */,
 				4F1E4FD425108CA5000B21C7 /* SheetView.h */,
 				4F1E4FD525108CA5000B21C7 /* SheetView.m */,
 				4F1E4FBE251089F1000B21C7 /* ViewController.h */,
@@ -243,6 +248,7 @@
 				4F8ED61D2510D80D00F6DC8D /* ContainerView.m in Sources */,
 				4F1E4FD325108A8B000B21C7 /* MapLikeViewController.m in Sources */,
 				4F3421F12511E752005BD0C0 /* UVContainerScrollView.m in Sources */,
+				4F3421F425120768005BD0C0 /* UVContainerScrollDelegate.m in Sources */,
 				4F1E4FC0251089F1000B21C7 /* ViewController.m in Sources */,
 				4F3421E22511AC81005BD0C0 /* TableViewController.m in Sources */,
 				4F8ED6232510EC4100F6DC8D /* MapViewController.m in Sources */,

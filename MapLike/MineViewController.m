@@ -9,7 +9,7 @@
 #import "MineViewController.h"
 #import "UVContainerScrollView.h"
 
-@interface MineViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface MineViewController () <UVContainerScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, readwrite, strong) UIButton *button;
 
@@ -50,6 +50,7 @@
     }
 }
 
+#pragma mark - tableView dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;
 }
@@ -60,13 +61,16 @@
     return cell;
 }
 
+#pragma mark - tableView delegate
+- (void)scrollView:(UIScrollView *)scrollView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"scrollView didSelectItemAtIndexPath: %@", @(indexPath.row));
+}
+
 - (UVContainerScrollView *)containerView {
     if (!_containerView) {
         _containerView = [[UVContainerScrollView alloc] initWithFrame:self.view.bounds];
-        _containerView.containerPosition = ContainerMoveTypeHide;
-        _containerView.containerTop = 50;
-        _containerView.containerMiddle = 300;
-        _containerView.containerBottom = 100;
+        _containerView.scrollViewDelegate = self;
+        _containerView.shouldHide = YES;
     }
     return _containerView;
 }
