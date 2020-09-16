@@ -45,7 +45,8 @@
     
 
     CGFloat top = self.containerView.containerTop;
-    
+    top += IPHONE_X_PADDING_TOP;
+
     if(scrollView.panGestureRecognizer.state == UIGestureRecognizerStateEnded)
         onceScrollingBeginDragging = NO;
     
