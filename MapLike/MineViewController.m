@@ -7,7 +7,7 @@
 //
 
 #import "MineViewController.h"
-#import "UVContainerViewController.h"
+#import "UVTableViewController.h"
 
 const CGFloat kPullUpLimitDistance = 30.0;
 
@@ -34,7 +34,7 @@ const CGFloat kPullUpLimitDistance = 30.0;
 }
 
 - (void)click:(UIButton *)button {
-    UVContainerViewController *vc = [[UVContainerViewController alloc] init];
+    UVTableViewController *vc = [[UVTableViewController alloc] init];
     vc.containerTop = 300;
     vc.swipeToHide = YES;
     vc.pullUpLimitedDistance = kPullUpLimitDistance;

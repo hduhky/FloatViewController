@@ -18,8 +18,8 @@ const NSTimeInterval kDismissDelayInterval = 0.45;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    self.containerCornerRadius = 15;
 }
 
 #pragma mark - setter
