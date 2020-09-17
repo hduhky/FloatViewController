@@ -7,13 +7,13 @@
 //
 
 #import "MineViewController.h"
-#import "UVContainerScrollView.h"
+#import "UVContainerViewController.h"
 
-@interface MineViewController () <UVContainerScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+const CGFloat kPullUpLimitDistance = 30.0;
+
+@interface MineViewController ()
 
 @property (nonatomic, readwrite, strong) UIButton *button;
-
-@property (nonatomic, readwrite, strong) UVContainerScrollView *containerView;
 
 @end
 
@@ -24,16 +24,7 @@
     if (self) {
         self.tabBarItem.title = @"我的";
         self.view.backgroundColor = [UIColor whiteColor];
-        self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-        [self.button setTitle:@"Click" forState:UIControlStateNormal];
-        [self.button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-        self.button.frame = CGRectMake(50, 100, 100, 60);
         [self.view addSubview:self.button];
-        [self.view addSubview:self.containerView];
-        UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        tableView.delegate = self.containerView.containerScrollDelegate;
-        tableView.dataSource = self;
-        [self.containerView addSubview:tableView];
     }
     return self;
 }
@@ -43,36 +34,21 @@
 }
 
 - (void)click:(UIButton *)button {
-    if (self.containerView.containerPosition == ContainerMoveTypeTop) {
-        [self.containerView hide];
-    } else {
-        [self.containerView show];
+    UVContainerViewController *vc = [[UVContainerViewController alloc] init];
+    vc.containerTop = 300;
+    vc.swipeToHide = YES;
+    vc.pullUpLimitedDistance = kPullUpLimitDistance;
+    [vc show];
+}
+
+- (UIButton *)button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_button setTitle:@"Click" forState:UIControlStateNormal];
+        [_button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+        _button.frame = CGRectMake(50, 100, 100, 60);
     }
-}
-
-#pragma mark - tableView dataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"id"];
-    cell.textLabel.text = [NSString stringWithFormat:@"No:%@", @(indexPath.row)];
-    return cell;
-}
-
-#pragma mark - tableView delegate
-- (void)scrollView:(UIScrollView *)scrollView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"scrollView didSelectItemAtIndexPath: %@", @(indexPath.row));
-}
-
-- (UVContainerScrollView *)containerView {
-    if (!_containerView) {
-        _containerView = [[UVContainerScrollView alloc] initWithFrame:self.view.bounds];
-        _containerView.scrollViewDelegate = self;
-        _containerView.shouldHide = YES;
-    }
-    return _containerView;
+    return _button;
 }
 
 @end
