@@ -361,6 +361,11 @@
         } else {
             self.transform = _transform;
         }
+        
+        if (self.pullUpLimitedDistance && ((self.containerTop + IPHONE_X_PADDING_TOP - self.transform.ty) > self.pullUpLimitedDistance)) {
+            _transform.ty = self.containerTop + IPHONE_X_PADDING_TOP - self.pullUpLimitedDistance;
+            self.transform = _transform;
+        }
 
         if ([self.delegate respondsToSelector:@selector(changeContainerMove:containerY:animated:)]) {
             [self.delegate changeContainerMove:ContainerMoveTypeTop containerY:self.transform.ty animated:NO];
@@ -397,6 +402,9 @@
         } else {
             moveType = (velocityInViewY < 0) ? ContainerMoveTypeTop : ContainerMoveTypeBottom;
         }
+    }
+    if (self.swipeToHide && moveType == ContainerMoveTypeBottom) {
+        moveType = ContainerMoveTypeHide;
     }
     [self containerMove:moveType];
 }

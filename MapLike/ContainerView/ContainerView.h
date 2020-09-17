@@ -49,6 +49,9 @@
  */
 @property (nonatomic) BOOL containerShadow;
 
+@property (nonatomic) CGFloat pullUpLimitedDistance;
+
+@property (nonatomic) BOOL swipeToHide;
 
 /**
  @brief This parameter sets the new position value for the up move type.
