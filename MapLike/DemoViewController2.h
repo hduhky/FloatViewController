@@ -1,8 +1,8 @@
 //
-//  MapLikeViewController.h
+//  DemoViewController2.h
 //  MapLike
 //
-//  Created by smb-lsp on 2020/9/15.
+//  Created by smb-lsp on 2020/9/18.
 //  Copyright © 2020 SMB-APP. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MapLikeViewController : UIViewController
+@interface DemoViewController2 : UIViewController
 
 @end
 

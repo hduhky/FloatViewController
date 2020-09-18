@@ -6,7 +6,7 @@
 //  Copyright © 2020 SMB-APP. All rights reserved.
 //
 
-#import "UVContainerViewHelper.h"
+#import "UVFloatContainerViewHelper.h"
 #import "ContainerDefines.h"
 
 @implementation HeaderLabel
@@ -18,7 +18,7 @@
 @implementation HeaderGrib
 @end
 
-@implementation UVContainerViewHelper
+@implementation UVFloatContainerViewHelper
 
 + (void)changeColorsHeaderView:(UIView *)headerView forStyle:(ContainerStyle)style {
     

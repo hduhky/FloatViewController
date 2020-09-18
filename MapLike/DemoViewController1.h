@@ -1,8 +1,8 @@
 //
-//  TableViewController.h
+//  DemoViewController1.h
 //  MapLike
 //
-//  Created by smb-lsp on 2020/9/16.
+//  Created by smb-lsp on 2020/9/18.
 //  Copyright © 2020 SMB-APP. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : UITableViewController
+@interface DemoViewController1 : UIViewController
 
 @end
 

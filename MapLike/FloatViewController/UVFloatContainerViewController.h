@@ -7,17 +7,19 @@
 //
 
 #import "ContainerViewController.h"
-#import "UVContainerViewHelper.h"
+#import "UVFloatContainerViewHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UVContainerViewController : ContainerViewController
+@interface UVFloatContainerViewController : ContainerViewController
 
 @property (nonatomic, readwrite, assign) BOOL swipeToHide;
 
-@property (nonatomic, readwrite, assign) BOOL movingEnabled;
+@property (nonatomic, readwrite, assign) BOOL shouldHideView;
 
 @property (nonatomic, readwrite, assign) CGFloat pullUpLimitedDistance;
+
+@property (nonatomic, readwrite, strong) UIButton *bottomButton;
 
 - (void)show;
 

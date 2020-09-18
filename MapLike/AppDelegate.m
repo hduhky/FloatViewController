@@ -7,10 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MapLikeViewController.h"
-#import "MapViewController.h"
-#import "TableViewController.h"
-#import "MineViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,17 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    MapLikeViewController *mapLikeViewController = [[MapLikeViewController alloc] init];
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    TableViewController *tableViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
-    MineViewController *mineViewController = [[MineViewController alloc] init];
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[mapLikeViewController, mapViewController, tableViewController, mineViewController];
-    
-    self.window =  [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = tabBarController;
-    [self.window makeKeyAndVisible];
     
     return YES;
 }

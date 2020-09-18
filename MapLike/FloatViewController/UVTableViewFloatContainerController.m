@@ -6,21 +6,21 @@
 //  Copyright © 2020 SMB-APP. All rights reserved.
 //
 
-#import "UVTableViewController.h"
+#import "UVTableViewFloatContainerController.h"
 
-@interface UVTableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface UVTableViewFloatContainerViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, readwrite, strong) UITableView *tableView;
 
 @end
 
-@implementation UVTableViewController
+@implementation UVTableViewFloatContainerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HeaderLabel *header = [UVContainerViewHelper createHeaderLabel];
-    [UVContainerViewHelper changeColorsHeaderView:header forStyle:self.containerStyle];
+    HeaderLabel *header = [UVFloatContainerViewHelper createHeaderLabel];
+    [UVFloatContainerViewHelper changeColorsHeaderView:header forStyle:self.containerStyle];
     self.headerView = header;
     
     [self.containerView addSubview:self.tableView];
@@ -45,6 +45,7 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 56, 0);
     }
     return _tableView;
 }

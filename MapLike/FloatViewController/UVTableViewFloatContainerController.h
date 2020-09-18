@@ -6,11 +6,11 @@
 //  Copyright © 2020 SMB-APP. All rights reserved.
 //
 
-#import "UVContainerViewController.h"
+#import "UVFloatContainerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UVTableViewController : UVContainerViewController
+@interface UVTableViewFloatContainerViewController : UVFloatContainerViewController
 
 @end
 

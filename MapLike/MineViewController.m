@@ -7,13 +7,15 @@
 //
 
 #import "MineViewController.h"
-#import "UVTableViewController.h"
+#import "UVTableViewFloatContainerController.h"
 
 const CGFloat kPullUpLimitDistance = 30.0;
 
 @interface MineViewController ()
 
 @property (nonatomic, readwrite, strong) UIButton *button;
+
+@property (nonatomic, readwrite, strong) UVTableViewFloatContainerViewController *floatViewController;
 
 @end
 
@@ -34,11 +36,7 @@ const CGFloat kPullUpLimitDistance = 30.0;
 }
 
 - (void)click:(UIButton *)button {
-    UVTableViewController *vc = [[UVTableViewController alloc] init];
-    vc.containerTop = 300;
-    vc.swipeToHide = YES;
-    vc.pullUpLimitedDistance = kPullUpLimitDistance;
-    [vc show];
+    [self.view addSubview:self.floatViewController.containerView];
 }
 
 - (UIButton *)button {
@@ -49,6 +47,15 @@ const CGFloat kPullUpLimitDistance = 30.0;
         _button.frame = CGRectMake(50, 100, 100, 60);
     }
     return _button;
+}
+
+- (UVTableViewFloatContainerViewController *)floatViewController {
+    if (!_floatViewController) {
+        _floatViewController = [[UVTableViewFloatContainerViewController alloc] init];
+        _floatViewController.containerTop = 300;
+        _floatViewController.shouldHideView = YES;
+    }
+    return _floatViewController;
 }
 
 @end

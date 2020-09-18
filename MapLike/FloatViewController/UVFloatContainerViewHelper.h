@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *grip;
 @end
 
-@interface UVContainerViewHelper : NSObject
+@interface UVFloatContainerViewHelper : NSObject
 
 + (HeaderLabel *)createHeaderLabel;
 + (HeaderSearch *)createHeaderSearch;
