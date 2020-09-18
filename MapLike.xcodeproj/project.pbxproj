@@ -13,7 +13,6 @@
 		4F1E4FC8251089F3000B21C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1E4FC6251089F3000B21C7 /* LaunchScreen.storyboard */; };
 		4F1E4FCB251089F3000B21C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E4FCA251089F3000B21C7 /* main.m */; };
 		4F1E4FD625108CA5000B21C7 /* SheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E4FD525108CA5000B21C7 /* SheetView.m */; };
-		4F3421E52511B582005BD0C0 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3421E42511B582005BD0C0 /* MineViewController.m */; };
 		4F3D64E02514465100F8B809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D64DF2514465100F8B809 /* Main.storyboard */; };
 		4F3D64E3251447A800F8B809 /* DemoViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D64E2251447A800F8B809 /* DemoViewController1.m */; };
 		4F3D64E6251447B100F8B809 /* DemoViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D64E5251447B100F8B809 /* DemoViewController2.m */; };
@@ -36,8 +35,6 @@
 		4F1E4FCA251089F3000B21C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F1E4FD425108CA5000B21C7 /* SheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SheetView.h; sourceTree = "<group>"; };
 		4F1E4FD525108CA5000B21C7 /* SheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SheetView.m; sourceTree = "<group>"; };
-		4F3421E32511B582005BD0C0 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		4F3421E42511B582005BD0C0 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		4F3D64DF2514465100F8B809 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4F3D64E1251447A800F8B809 /* DemoViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController1.h; sourceTree = "<group>"; };
 		4F3D64E2251447A800F8B809 /* DemoViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController1.m; sourceTree = "<group>"; };
@@ -98,8 +95,6 @@
 				4F1E4FBB251089F1000B21C7 /* AppDelegate.h */,
 				4F1E4FBC251089F1000B21C7 /* AppDelegate.m */,
 				4F3D64DF2514465100F8B809 /* Main.storyboard */,
-				4F3421E32511B582005BD0C0 /* MineViewController.h */,
-				4F3421E42511B582005BD0C0 /* MineViewController.m */,
 				4F3D64E1251447A800F8B809 /* DemoViewController1.h */,
 				4F3D64E2251447A800F8B809 /* DemoViewController1.m */,
 				4F3D64E4251447B100F8B809 /* DemoViewController2.h */,
@@ -257,7 +252,6 @@
 				4F3D64E3251447A800F8B809 /* DemoViewController1.m in Sources */,
 				4F3D64E6251447B100F8B809 /* DemoViewController2.m in Sources */,
 				4F80D26D2513790700C36F08 /* UVFloatContainerViewHelper.m in Sources */,
-				4F3421E52511B582005BD0C0 /* MineViewController.m in Sources */,
 				4F80D26A2513751B00C36F08 /* UVTableViewFloatContainerController.m in Sources */,
 				4F8ED61B2510D80D00F6DC8D /* ContainerViewController.m in Sources */,
 				4F1E4FD625108CA5000B21C7 /* SheetView.m in Sources */,
