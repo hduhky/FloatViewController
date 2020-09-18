@@ -38,15 +38,6 @@ const NSTimeInterval kDismissDelayInterval = 0.45;
     self.view.hidden = shouldHideView;
 }
 
-- (void)setBottomButton:(UIButton *)bottomButton {
-    if (_bottomButton) {
-        [_bottomButton removeFromSuperview];
-    }
-    bottomButton.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - 56, CGRectGetWidth(self.view.frame), 56);
-    _bottomButton = bottomButton;
-    [self.view addSubview:_bottomButton];
-}
-
 #pragma mark - getter
 
 #pragma mark - show and dismiss

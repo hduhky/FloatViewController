@@ -29,11 +29,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *grip;
 @end
 
+@interface FooterFixButton : UIView
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIView *separatorLine;
+@end
+
 @interface UVFloatContainerViewHelper : NSObject
 
 + (HeaderLabel *)createHeaderLabel;
 + (HeaderSearch *)createHeaderSearch;
 + (HeaderGrib *)createHeaderGrip;
++ (FooterFixButton *)createFooterFixButton;
 
 + (void)changeColorsHeaderView:(UIView *)headerView forStyle:(ContainerStyle)style;
 

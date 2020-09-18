@@ -23,6 +23,9 @@
     [UVFloatContainerViewHelper changeColorsHeaderView:header forStyle:self.containerStyle];
     self.headerView = header;
     
+    FooterFixButton *footerView = [self createFooterFixView];
+    [self.view addSubview:footerView];
+    
     [self.containerView addSubview:self.tableView];
 }
 
@@ -38,16 +41,27 @@
 }
 
 #pragma mark - delegate
-
+- (void)changeContainerMove:(ContainerMoveType)containerMove containerY:(CGFloat)containerY animated:(BOOL)animated {
+    [super changeContainerMove:containerMove containerY:containerY animated:animated];
+}
 #pragma mark - getter
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 56, 0);
+        if (self.footerFixView) {
+            UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 0, CGRectGetHeight(self.footerFixView.frame), 0);
+            _tableView.contentInset = edgeInsets;
+        }
     }
     return _tableView;
 }
 
+- (FooterFixButton *)createFooterFixView {
+    FooterFixButton *footer = [UVFloatContainerViewHelper createFooterFixButton];
+    footer.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - CGRectGetHeight(footer.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(footer.frame));
+    self.footerFixView = footer;
+    return footer;
+}
 @end

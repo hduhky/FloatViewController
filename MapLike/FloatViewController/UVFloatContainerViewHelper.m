@@ -18,6 +18,9 @@
 @implementation HeaderGrib
 @end
 
+@implementation FooterFixButton
+@end
+
 @implementation UVFloatContainerViewHelper
 
 + (void)changeColorsHeaderView:(UIView *)headerView forStyle:(ContainerStyle)style {
@@ -129,6 +132,21 @@
     return view;
 }
 
++ (FooterFixButton *)createFooterFixButton {
+    FooterFixButton *view = [[FooterFixButton alloc] initWithFrame:CGRectMake(0, 0, [self headerSize], 56 + IPHONE_X_PADDING_BOTTOM)];
+    view.backgroundColor = [UIColor lightGrayColor];
+    view.button = [self createButton];
+    view.button.frame = CGRectMake(0, 1, view.frame.size.width, view.frame.size.height - IPHONE_X_PADDING_BOTTOM - 1);
+    [view addSubview:view.button];
+    view.separatorLine = [self createSeparatorLine];
+    view.separatorLine.frame = CGRectMake(
+        view.separatorLine.frame.origin.x, 0,
+        view.separatorLine.frame.size.width, view.separatorLine.frame.size.height
+    );
+    [view addSubview:view.separatorLine];
+    return view;
+}
+
 + (UIView *)createSeparatorLine {
     CGFloat height = 0.5;
     UIView *
@@ -145,5 +163,12 @@
     return grip;
 }
 
++ (UIButton *)createButton {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"Click" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    return button;
+}
 
 @end

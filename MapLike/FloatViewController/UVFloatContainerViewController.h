@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readwrite, assign) CGFloat pullUpLimitedDistance;
 
-@property (nonatomic, readwrite, strong) UIButton *bottomButton;
+@property (nonatomic, readwrite, strong) UIView *footerFixView;
 
 - (void)show;
 
