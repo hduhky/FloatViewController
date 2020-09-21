@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseFloatTableViewController : BaseFloatViewController
 
+@property (nonatomic, readwrite, strong) UITableView *tableView;
+
 @end
 
 NS_ASSUME_NONNULL_END

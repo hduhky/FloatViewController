@@ -8,7 +8,7 @@
 
 #import "BaseFloatTableViewController.h"
 
-@interface BaseFloatTableViewController () <UITableViewDataSource>
+@interface BaseFloatTableViewController ()
 
 @end
 
@@ -21,26 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITableView *tableView = [[UITableView alloc] init];
-    tableView.dataSource = self;
-    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = tableView;
     [self.container addScrollView:tableView];
+    self.container.layout.swipeToHide = NO;
+    self.container.shadowButton.userInteractionEnabled = NO;
+    [self.container moveWithType:KYContainerMoveTypeTop];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.container remove];
-    self.container = nil;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"No:%@", @(indexPath.row)];
-    return cell;
-}
 
 @end

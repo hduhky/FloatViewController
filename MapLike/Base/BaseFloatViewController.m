@@ -21,10 +21,9 @@ static const NSTimeInterval kDismissDelayInterval = 0.45;
     [super viewDidLoad];
     
     KYContainerLayout *layout = [[KYContainerLayout alloc] init];
-    layout.startPosition = KYContainerMoveTypeHide;
     layout.backgroundShadowShow = YES;
-    layout.positions = [KYContainerPosition positionWithTop:200 middle:0 bottom:0];
     layout.swipeToHide = YES;
+    layout.positions = [KYContainerPosition positionWithTop:200 middle:300 bottom:100];
     
     KYContainerController *container = [[KYContainerController alloc] initWithViewController:self layout:layout];
     container.view.cornerRadius = 15;
@@ -37,6 +36,12 @@ static const NSTimeInterval kDismissDelayInterval = 0.45;
     container.shadowButton.userInteractionEnabled = YES;
     container.delegate = self;
     self.container = container;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.container remove];
+    self.container = nil;
 }
 
 #pragma mark - show and dismiss
@@ -59,6 +64,7 @@ static const NSTimeInterval kDismissDelayInterval = 0.45;
 }
 
 - (void)remove {
+    [self.container remove];
     self.container = nil;
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
