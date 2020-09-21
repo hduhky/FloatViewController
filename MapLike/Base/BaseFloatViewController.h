@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "KYContainerController.h"
 
 @interface BaseFloatViewController : UIViewController
+
+@property (nonatomic, readwrite, strong) KYContainerController *container;
 
 - (void)show;
 
@@ -18,4 +19,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

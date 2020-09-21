@@ -16,6 +16,10 @@
 
 @implementation UVTableViewFloatContainerViewController
 
+- (void)dealloc {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

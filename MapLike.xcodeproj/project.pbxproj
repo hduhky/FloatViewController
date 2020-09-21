@@ -13,6 +13,7 @@
 		0A00A66B25189C020037B0A9 /* KYContainerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00A66625189C020037B0A9 /* KYContainerTypes.m */; };
 		0A00A66C25189C020037B0A9 /* KYContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00A66725189C020037B0A9 /* KYContainerView.m */; };
 		0A00A66D25189C020037B0A9 /* KYContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00A66825189C020037B0A9 /* KYContainerController.m */; };
+		0A00A6722518B3EA0037B0A9 /* BaseFloatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00A6712518B3EA0037B0A9 /* BaseFloatTableViewController.m */; };
 		4B85D30B5AAE1509E5FE89F9 /* libPods-MapLike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741BE5DA42237129D65D0427 /* libPods-MapLike.a */; };
 		4F1E4FBD251089F1000B21C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E4FBC251089F1000B21C7 /* AppDelegate.m */; };
 		4F1E4FC5251089F3000B21C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1E4FC4251089F3000B21C7 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		0A00A66625189C020037B0A9 /* KYContainerTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYContainerTypes.m; sourceTree = "<group>"; };
 		0A00A66725189C020037B0A9 /* KYContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYContainerView.m; sourceTree = "<group>"; };
 		0A00A66825189C020037B0A9 /* KYContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYContainerController.m; sourceTree = "<group>"; };
+		0A00A6702518B3E90037B0A9 /* BaseFloatTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFloatTableViewController.h; sourceTree = "<group>"; };
+		0A00A6712518B3EA0037B0A9 /* BaseFloatTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFloatTableViewController.m; sourceTree = "<group>"; };
 		1B879E1ADD2C9B951DD3E77D /* Pods-MapLike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapLike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapLike/Pods-MapLike.debug.xcconfig"; sourceTree = "<group>"; };
 		4F1E4FB8251089F1000B21C7 /* MapLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1E4FBB251089F1000B21C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 			children = (
 				0A00A656251891410037B0A9 /* BaseFloatViewController.h */,
 				0A00A657251891410037B0A9 /* BaseFloatViewController.m */,
+				0A00A6702518B3E90037B0A9 /* BaseFloatTableViewController.h */,
+				0A00A6712518B3EA0037B0A9 /* BaseFloatTableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8ED61D2510D80D00F6DC8D /* ContainerView.m in Sources */,
+				0A00A6722518B3EA0037B0A9 /* BaseFloatTableViewController.m in Sources */,
 				4F80D267251348A600C36F08 /* UVFloatContainerViewController.m in Sources */,
 				0A00A66D25189C020037B0A9 /* KYContainerController.m in Sources */,
 				0A00A66925189C020037B0A9 /* KYContainerDevice.m in Sources */,

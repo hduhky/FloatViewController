@@ -7,14 +7,11 @@
 //
 
 #import "BaseFloatViewController.h"
-#import "KYContainerController.h"
 #import "UVFloatContainerViewHelper.h"
 
 static const NSTimeInterval kDismissDelayInterval = 0.45;
 
 @interface BaseFloatViewController () <KYContainerControllerDelegate>
-
-@property (nonatomic, readwrite, strong) KYContainerController *container;
 
 @end
 
@@ -42,13 +39,6 @@ static const NSTimeInterval kDismissDelayInterval = 0.45;
     self.container = container;
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    
-    [self.container remove];
-    self.container = nil;
-}
-
 #pragma mark - show and dismiss
 - (void)show {
     [UIApplication.sharedApplication.keyWindow.rootViewController addChildViewController:self];
@@ -69,6 +59,7 @@ static const NSTimeInterval kDismissDelayInterval = 0.45;
 }
 
 - (void)remove {
+    self.container = nil;
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
 }
