@@ -8,6 +8,7 @@
 
 #import "DemoViewController1.h"
 #import "UVTableViewFloatContainerController.h"
+#import "BaseFloatViewController.h"
 
 @interface DemoViewController1 ()
 
@@ -21,10 +22,13 @@
 }
 
 - (IBAction)showAction:(id)sender {
-    UVTableViewFloatContainerViewController *floatVC = [[UVTableViewFloatContainerViewController alloc] init];
-    floatVC.containerTop = 400;
-    floatVC.swipeToHide = YES;
-    floatVC.pullUpLimitedDistance = 0.01f;
+//    UVTableViewFloatContainerViewController *floatVC = [[UVTableViewFloatContainerViewController alloc] init];
+//    floatVC.containerTop = 400;
+//    floatVC.swipeToHide = YES;
+//    floatVC.pullUpLimitedDistance = 0.01f;
+//    [floatVC show];
+    
+    BaseFloatViewController *floatVC = [[BaseFloatViewController alloc] init];
     [floatVC show];
 }
 
