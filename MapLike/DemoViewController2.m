@@ -7,12 +7,9 @@
 //
 
 #import "DemoViewController2.h"
-#import "UVTableViewFloatContainerController.h"
 #import "BaseFloatTableViewController.h"
 
 @interface DemoViewController2 ()
-
-//@property (nonatomic, readwrite, strong) UVTableViewFloatContainerViewController *floatVC;
 
 @property (nonatomic, readwrite, strong) BaseFloatTableViewController *floatVC;
 
@@ -24,7 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [self.view addSubview:self.floatVC.view];
+    self.floatVC.view.hidden = YES;
+    [self.view addSubview:self.floatVC.container.view];
     [self.floatVC.container moveWithType:KYContainerMoveTypeTop];
 }
 
@@ -34,14 +32,5 @@
     }
     return _floatVC;
 }
-
-//- (UVTableViewFloatContainerViewController *)floatVC {
-//    if (!_floatVC) {
-//        _floatVC = [[UVTableViewFloatContainerViewController alloc] init];
-//        _floatVC.containerTop = 300;
-//        _floatVC.shouldHideView = YES;
-//    }
-//    return _floatVC;
-//}
 
 @end
